@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="https://blog.hubspot.com/website/css-animatable-properties"
+      >more details</a
+    >
+
+    <div class="container">
+      <div class="example-background"></div>
+      <div class="example-background"></div>
+      <div class="example-background"></div>
+      <div class="example-background"></div>
+    </div>
+  </body>
+  <style type="text/css">
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .example-background {
+      background-image: url("https://img0.baidu.com/it/u=1152645585,3096393522&fm=253&fmt=auto&app=138&f=JPEG?w=1200&h=800");
+      background-repeat: no-repeat;
+      width: 400px;
+      height: 300px;
+      background-position: left top;
+      background-size: cover;
+      /* background-size: auto 100%; */
+      /* transition: background-size 2s linear; */
+      transition: background-position-x 800ms ease-out;
+    }
+
+    .example-background:hover {
+      /* background-image: url("https://img0.baidu.com/it/u=187245073,1140508107&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=332"); */
+      background-position-x: -20px;
+    }
+  </style>
+</html>

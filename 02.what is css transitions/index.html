@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button class="button" type="button">click</button>
+  </body>
+  <style type="text/css">
+    .button {
+      width: 120px;
+      height: 40px;
+      color: white;
+      border: none;
+      border-radius: 40px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      background-color: red;
+      /* Assign specific transition property here. split multiple attribute by a comma. */
+      transition-property: background-color, width;
+      /* assign the duration of transition */
+      transition-duration: 800ms;
+      transition-delay: 200ms;
+    }
+
+    .button:hover {
+      background-color: purple;
+      width: 140px;
+      height: 40px;
+    }
+  </style>
+</html>

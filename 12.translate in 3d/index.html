@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img
+      alt="pic"
+      src="https://img0.baidu.com/it/u=187245073,1140508107&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=332"
+    />
+  </body>
+  <style type="text/css">
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      width: 100vw;
+      /*
+        perspective 属性定义 3D 元素距视图的距离，以像素计。此属性允许您更改查看 3D 元素的视角。
+        当为元素定义 perspective 属性时，其子元素会获得透视效果，而不是元素本身。 
+        数值越小，3D效果越明显，足够大的时候，就相当于看远方的东西，不会看出3D效果
+      */
+      perspective: 500px;
+    }
+
+    img {
+      width: 300px;
+      height: 300px;
+      transition: transform 800ms ease-out;
+    }
+
+    img:hover {
+      transform: translateZ(10px);
+    }
+  </style>
+</html>

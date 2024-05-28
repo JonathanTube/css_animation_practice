@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="ease">ease: slow-fast-slow</div>
+      <div class="linear">linear: same speed</div>
+      <div class="ease_in">ease in: slow-fast</div>
+      <div class="ease_out">ease out: fast-slow</div>
+      <div class="ease_in_out">ease in and out: as same as ease</div>
+    </div>
+  </body>
+  <style type="text/css">
+    .container div {
+      height: 40px;
+      width: 150px;
+      border-radius: 40px;
+      margin: 20px;
+      line-height: 40px;
+      font-size: 14px;
+      text-align: center;
+      background-color: red;
+      color: #fff;
+      transition: transformX();
+      transition-duration: 3s;
+    }
+
+    .ease {
+      transition-timing-function: ease;
+    }
+
+    .linear {
+      transition-timing-function: linear;
+    }
+
+    .ease_in {
+      transition-timing-function: ease-in;
+    }
+
+    .ease_out {
+      transition-timing-function: ease-out;
+    }
+
+    .ease_in_out {
+      transition-timing-function: ease-in-out;
+    }
+
+    .container div:hover {
+      transform: translateX(400px);
+    }
+  </style>
+</html>

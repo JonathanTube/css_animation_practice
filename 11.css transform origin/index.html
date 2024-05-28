@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Call my name</h1>
+      <img
+        alt="pic"
+        src="https://img0.baidu.com/it/u=187245073,1140508107&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=332"
+      />
+    </div>
+  </body>
+  <style type="text/css">
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      width: 100vw;
+    }
+
+    .container {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      overflow: hidden;
+      position: relative;
+      background-color: blue;
+      color: #fff;
+      display: grid;
+      align-items: center;
+      justify-items: center;
+    }
+
+    h1 {
+      position: absolute;
+      color: #fff;
+      z-index: 1;
+    }
+
+    img {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      transition: transform 800ms ease-out;
+      /* set different directions */
+      transform-origin: bottom center;
+      z-index: 2;
+    }
+
+    img:hover {
+      transform: rotate(90deg);
+    }
+  </style>
+</html>

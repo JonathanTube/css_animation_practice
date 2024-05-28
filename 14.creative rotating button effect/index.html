@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="#">Hover Me</a>
+  </body>
+  <style type="text/css">
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    a {
+      text-decoration: none;
+      color: #272727;
+      font-size: 45px;
+      border: 1px solid #272727;
+      border-radius: 10px;
+      padding: 40px 80px;
+      position: relative;
+      /* important */
+      overflow: hidden;
+    }
+
+    a:before {
+      /* using psudo element */
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: red;
+      width: 100%;
+      height: 100%;
+      transform: rotate(-90deg);
+      z-index: -1;
+      transform-origin: bottom left;
+      transition: transform 1s ease;
+    }
+
+    /* not a:before:hover, be careful!!! */
+    a:hover:before {
+      transform: rotate(0deg);
+    }
+  </style>
+</html>

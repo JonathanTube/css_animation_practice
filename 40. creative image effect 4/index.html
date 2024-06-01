@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <img
+        alt=""
+        src="https://img0.baidu.com/it/u=187245073,1140508107&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=332"
+      />
+      <div class="caption">
+        <h1>Call my name</h1>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa
+          voluptatibus quidem quasi, quibusdam quaerat quia, quo, nihil
+          aspernatur quos.
+        </p>
+      </div>
+    </div>
+  </body>
+  <style type="text/css">
+    .container {
+      width: 400px;
+      height: 280px;
+      overflow: hidden;
+      position: relative;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      transition: all 0.5s;
+    }
+
+    .caption {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 50%;
+      padding: 10%;
+      box-sizing: border-box;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0);
+      transition: all 0.5s;
+    }
+
+    .container:hover .caption {
+      background-color: rgba(0, 0, 0, 1);
+      top: 50%;
+    }
+
+    .container:hover img {
+      transform: translateY(-50%);
+    }
+
+    h1 {
+      margin: 0;
+      text-transform: uppercase;
+    }
+
+    p {
+      margin: 0;
+      margin-top: 20px;
+      text-transform: capitalize;
+    }
+  </style>
+</html>

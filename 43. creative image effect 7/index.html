@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <img
+        alt=""
+        src="https://gips0.baidu.com/it/u=3560029307,576412274&fm=3028&app=3028&f=JPEG&fmt=auto?w=960&h=1280"
+      />
+      <div class="caption">
+        <h1>image hover</h1>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem
+          voluptatibus quaerat quas quia, quo, quibusdam quae, quos nihil
+          voluptates. Quisquam, voluptas.
+        </p>
+        <a href="#">read more</a>
+      </div>
+    </div>
+
+    <div class="colors"></div>
+  </body>
+
+  <style type="text/css">
+    body {
+      /* background-color: black; */
+      margin: 20px;
+    }
+
+    .container {
+      border: 3px solid #fff;
+      width: 300px;
+      overflow: hidden;
+      position: relative;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    .container:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 180%;
+      height: 180%;
+      background-color: rgba(0, 0, 0, 0.4);
+      transition: all 0.5s;
+      transform: rotate(45deg) translateX(60%);
+    }
+
+    .container:hover:before {
+      transform: rotate(45deg) translateX(-40%);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .caption {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      letter-spacing: 1px;
+      font-size: 14px;
+      color: #fff;
+      z-index: 99;
+    }
+
+    h1 {
+      width: 100%;
+      height: 40px;
+      line-height: 40px;
+      text-transform: uppercase;
+      text-align: center;
+      background-color: #000;
+      transform: translate(110%, -80px);
+      transition: all 0.5s;
+    }
+
+    .container:hover .caption h1 {
+      transform: translate(0, 0);
+    }
+
+    p {
+      text-align: center;
+      padding: 10px 20px;
+      background-color: rgba(0, 0, 0, 0.4);
+      transform: translate(-110%, 280px);
+      transition: all 0.5s;
+      transition-delay: 0.25s;
+    }
+
+    .container:hover .caption p {
+      transform: translate(0, 0);
+    }
+
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #fff;
+      padding: 2px 10px;
+      text-align: center;
+      border-radius: 5px;
+      line-height: 40px;
+      background-color: #000;
+      transform: translate(-110%, 320px);
+      transition: all 0.5s;
+      transition-delay: 0.5s;
+    }
+
+    .container:hover .caption a {
+      transform: translate(0, 0);
+    }
+
+    .colors {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-color: red;
+      position: relative;
+      mix-blend-mode: multiply;
+    }
+
+    .colors:before {
+      content: "";
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-color: green;
+      top: 50%;
+      left: -25%;
+      mix-blend-mode: multiply;
+    }
+
+    .colors:after {
+      content: "";
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-color: blue;
+      top: 50%;
+      left: 25%;
+      mix-blend-mode: multiply;
+    }
+  </style>
+</html>

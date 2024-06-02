@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="#"><span class="wave"></span>submit</a>
+  </body>
+  <style type="text/css">
+    body {
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: black;
+    }
+
+    a {
+      font-family: "Courier New", Courier, monospace;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-size: 30px;
+      font-weight: lighter;
+      width: 200px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      color: #00aeff;
+      border: 1px solid #00aeff;
+      overflow: hidden;
+      transition: all 5s;
+    }
+
+    a:hover {
+      color: #333;
+    }
+
+    .wave {
+      position: absolute;
+      width: 100%;
+      height: 300%;
+      left: 0;
+      top: 100%;
+      background-image: url("https://static.vecteezy.com/system/resources/previews/009/302/625/non_2x/sea-waves-clipart-design-illustration-free-png.png");
+      animation: wave 4s linear infinite;
+      transition: all 2s;
+      z-index: -1;
+    }
+
+    a:hover .wave {
+      top: -200%;
+    }
+
+    @keyframes wave {
+      0% {
+        background-position-x: 0;
+      }
+      100% {
+        background-position-x: 100%;
+      }
+    }
+  </style>
+</html>

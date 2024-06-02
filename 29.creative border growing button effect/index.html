@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="#">Submit</a>
+  </body>
+  <style type="text/css">
+    body {
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: black;
+    }
+
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 30px;
+      height: 80px;
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      color: #fff;
+      background: darkorange;
+    }
+
+    a:before,
+    a:after {
+      content: "";
+      position: absolute;
+      transition: all 0.5s;
+    }
+
+    a:before {
+      width: 40px;
+      height: 40px;
+      top: -10px;
+      left: -10px;
+      border-left: 5px solid darkorange;
+      border-top: 5px solid darkorange;
+    }
+
+    a:after {
+      width: 40px;
+      height: 40px;
+      bottom: -10px;
+      right: -10px;
+      border-right: 5px solid darkorange;
+      border-bottom: 5px solid darkorange;
+    }
+
+    a:hover:before,
+    a:hover:after {
+      width: calc(100% + 15px);
+      height: calc(100% + 15px);
+    }
+  </style>
+</html>

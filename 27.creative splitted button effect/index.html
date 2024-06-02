@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="#"><span></span>Hover Me</a>
+  </body>
+  <style type="text/css">
+    body {
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: black;
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 30px;
+      height: 80px;
+      padding: 0 40px;
+      border: 1px solid goldenrod;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      color: goldenrod;
+      transition: all 0.5s;
+      overflow: hidden;
+    }
+
+    a:hover {
+      color: #fff;
+    }
+
+    a:before,
+    a:after,
+    span:before,
+    span:after {
+      content: "";
+      text-transform: capitalize;
+      position: absolute;
+      width: 25%;
+      height: 100%;
+      z-index: -1;
+      background-color: goldenrod;
+      transition: all 0.4s;
+    }
+
+    a:before {
+      left: -25%;
+      transition-delay: 0.1s;
+    }
+
+    a:after {
+      top: -100%;
+      left: 25%;
+      transition-delay: 0.2s;
+    }
+
+    a:hover:before {
+      left: 0;
+      top: 0;
+    }
+
+    a:hover:after {
+      top: 0;
+      left: 25%;
+    }
+
+    a span:before {
+      top: 100%;
+      right: 25%;
+      transition-delay: 0.3s;
+    }
+
+    a span:after {
+      top: 0;
+      right: -25%;
+      transition-delay: 0.4s;
+    }
+
+    a:hover span:before {
+      top: 0;
+      left: 50%;
+    }
+
+    a:hover span:after {
+      top: 0;
+      right: 0;
+    }
+  </style>
+</html>

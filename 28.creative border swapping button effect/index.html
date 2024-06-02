@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="#">Hover Me</a>
+  </body>
+  <style type="text/css">
+    body {
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: black;
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 30px;
+      height: 80px;
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      color: #fff;
+    }
+
+    a:before,
+    a:after {
+      content: "";
+      text-transform: capitalize;
+      position: absolute;
+      transition: all 0.5s;
+    }
+
+    a:before {
+      width: 100%;
+      height: 150%;
+      border-left: 1px solid red;
+      border-right: 1px solid yellow;
+      transition-delay: 0.2s;
+    }
+
+    a:after {
+      width: 150%;
+      height: 100%;
+      border-top: 1px solid red;
+      border-bottom: 1px solid yellow;
+    }
+
+    a:hover:before {
+      transform: rotateY(180deg);
+    }
+
+    a:hover:after {
+      transform: rotateX(180deg);
+    }
+  </style>
+</html>

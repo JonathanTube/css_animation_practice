@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="#">submit</a>
+  </body>
+  <style type="text/css">
+    body {
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: darkcyan;
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 22px;
+      width: 160px;
+      height: 50px;
+      border-radius: 30px;
+      text-align: center;
+      line-height: 50px;
+      position: relative;
+      color: #666;
+      background-color: #fff;
+    }
+
+    a:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      z-index: -1;
+      transition: all 0.2s;
+      border-radius: 30px;
+      background-color: #fff;
+    }
+
+    a:hover:before {
+      transform: scaleX(1.2) scaleY(1.5);
+      opacity: 0;
+    }
+
+    a:hover {
+      transform: translateY(-3px);
+
+      /* box-shadow: h-shadow v-shadow blur spread color inset
+          h-shadow:  必需的。水平阴影的位置。允许负值
+          v-shadow:  必需的。垂直阴影的位置。允许负值
+          blur:      可选的。模糊距离
+          spread:    可选的。阴影的尺寸
+          color:     必需的。阴影的颜色值
+          inset:     可选的。将外部阴影 (outset) 改为内部阴影。默认是外部阴影。
+      */
+      box-shadow: 5px 10px 20px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    a:active {
+      transform: translateY(0);
+      box-shadow: 5px 10px 10px 2px rgba(0, 0, 0, 0.5);
+    }
+  </style>
+</html>

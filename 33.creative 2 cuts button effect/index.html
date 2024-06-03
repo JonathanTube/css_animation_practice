@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="#">submit</a>
+  </body>
+  <style type="text/css">
+    body {
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    a {
+      font-family: "Courier New", Courier, monospace;
+      letter-spacing: 2px;
+      text-transform: capitalize;
+      text-decoration: none;
+      font-size: 25px;
+      width: 160px;
+      height: 60px;
+      text-align: center;
+      line-height: 60px;
+      position: relative;
+      overflow: hidden;
+      /* border: 3px solid red; */
+      color: #333;
+      /* color: transparent; */
+    }
+
+    a:before {
+      content: "";
+      position: absolute;
+      width: 10%;
+      height: 250%;
+      left: 50%;
+      top: 50%;
+      background-color: #fff;
+      transform: translate(-50%, -50%) rotate(-50deg);
+      transition: all 0.2s;
+      z-index: -2;
+    }
+
+    a:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      border: 2px solid #333;
+      z-index: -3;
+    }
+
+    a:hover::before {
+      width: 100%;
+      height: 100%;
+      background: black;
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    a:hover {
+      color: #fff;
+    }
+  </style>
+</html>

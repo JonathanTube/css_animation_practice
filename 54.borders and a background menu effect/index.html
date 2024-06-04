@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li>Home</li>
+      <li>About</li>
+      <li>Services</li>
+      <li>Portfolio</li>
+      <li>Contract</li>
+    </ul>
+  </body>
+  <style type="text/css">
+    body {
+      display: flex;
+      height: 100vh;
+      align-items: center;
+      justify-content: center;
+    }
+    ul {
+      display: flex;
+      align-items: center;
+    }
+
+    li {
+      position: relative;
+      list-style: none;
+      padding: 10px 20px;
+      color: #333;
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+
+    li:hover {
+      color: #fff;
+    }
+
+    li:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-top: 2px solid #000;
+      border-bottom: 2px solid #000;
+      transition: all 0.5s;
+      transform: scaleY(2);
+      opacity: 0;
+    }
+
+    li:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: calc(100% + 4px);
+      background-color: #000;
+      transition: all 0.5s;
+      z-index: -1;
+      transform: scale(0);
+    }
+
+    li:hover:before {
+      transform: scaleY(1.5);
+      opacity: 1;
+    }
+
+    li:hover:after {
+      transform: scale(1);
+    }
+  </style>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li data-text="Home">Home</li>
+      <li data-text="About">About</li>
+      <li data-text="Services">Services</li>
+      <li data-text="Portfolio">Portfolio</li>
+      <li data-text="Contract">Contract</li>
+    </ul>
+  </body>
+  <style type="text/css">
+    @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
+    body {
+      display: flex;
+      height: 100vh;
+      background-color: black;
+      align-items: center;
+      justify-content: center;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    li {
+      position: relative;
+      list-style: none;
+      color: transparent;
+      font-size: 120px;
+      -webkit-text-stroke-width: 2px;
+      -webkit-text-stroke-color: yellow;
+      font-family: cursive;
+    }
+
+    li:before,
+    li:after {
+      /* keypoint */
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: all 1s;
+    }
+
+    li::before {
+      /* keypoint */
+      -webkit-text-stroke: 2px #000;
+      -webkit-text-fill-color: red;
+      /* color: red; */
+    }
+
+    li:after {
+      -webkit-text-stroke: 2px #000;
+      color: aqua;
+    }
+
+    li:hover {
+      color: #fff;
+      -webkit-text-stroke: 2px #000;
+    }
+
+    li:hover:before {
+      transform: translate(5px, -5px);
+      opacity: 1;
+    }
+
+    li:hover:after {
+      transform: translate(10px, -10px);
+      opacity: 1;
+    }
+  </style>
+</html>

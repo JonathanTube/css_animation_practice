@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/afba94a29e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <a href="#" class="icon">
+        <i class="fa-brands fa-facebook-f"></i>
+      </a>
+      <a href="#" class="icon">
+        <i class="fa-brands fa-twitter"></i>
+      </a>
+      <a href="#" class="icon">
+        <i class="fa-brands fa-google"></i>
+      </a>
+      <a href="#" class="icon">
+        <i class="fa-brands fa-youtube"></i>
+      </a>
+      <a href="#" class="icon">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+    </div>
+  </body>
+
+  <style type="text/css">
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      display: flex;
+      text-align: center;
+    }
+
+    .icon {
+      width: 90px;
+      height: 90px;
+      background-color: #f1f1f1;
+      margin: 10px;
+      border-radius: 30%;
+      color: #10ac84;
+      box-shadow: 0 5px 15px -5px #00000070;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .icon i {
+      line-height: 90px;
+      font-size: 25px;
+      transition: all 0.2s;
+    }
+
+    .icon:hover i {
+      transform: scale(1.3);
+      color: #f1f1f1;
+    }
+
+    .icon:hover:before {
+      /* see reference for more details */
+      /* animationName; duration, times, fillMode(none|forwards|backwards|both) */
+      animation: animation 0.7s 1 forwards;
+    }
+
+    .icon:before {
+      content: "";
+      position: absolute;
+      width: 120%;
+      height: 120%;
+      background-color: #10ac84;
+      left: -110%;
+      top: 90%;
+      transform: rotate(45deg);
+    }
+
+    @keyframes animation {
+      0% {
+        left: -110%;
+        top: 90%;
+      }
+      50% {
+        left: 15%;
+        top: -35%;
+      }
+      100% {
+        left: -10%;
+        top: -10%;
+      }
+    }
+  </style>
+</html>

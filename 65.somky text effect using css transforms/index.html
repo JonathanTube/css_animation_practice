@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li>笑容</li>
+      <li>😄</li>
+      <li>逐</li>
+      <li>渐</li>
+      <li>消</li>
+      <li>失</li>
+    </ul>
+  </body>
+  <style type="text/css">
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #000;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    ul li {
+      text-transform: uppercase;
+      list-style: none;
+      color: white;
+      font-size: 100px;
+      font-weight: bold;
+      letter-spacing: 10px;
+      transition: 2s;
+    }
+
+    ul:hover li:nth-child(2) {
+      transition-delay: 0s;
+    }
+
+    ul:hover li:nth-child(2) {
+      transition-delay: 0.2s;
+    }
+
+    ul:hover li:nth-child(3) {
+      transition-delay: 0.4s;
+    }
+
+    ul:hover li:nth-child(4) {
+      transition-delay: 0.6s;
+    }
+
+    ul:hover li:nth-child(5) {
+      transition-delay: 0.8s;
+    }
+
+    ul:hover li:nth-child(6) {
+      transition-delay: 1s;
+    }
+
+    ul:hover li:nth-child(7) {
+      transition-delay: 1.2s;
+    }
+
+    ul:hover li {
+      transform: rotate(45deg) translateY(-200px);
+      opacity: 0;
+      /* smoky effect */
+      filter: blur(20px);
+    }
+  </style>
+</html>

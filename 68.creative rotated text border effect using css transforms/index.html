@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="box">
+      <span class="rotated"></span>
+      <h1>
+        class
+        <br />
+        <span>border</span>
+        <br />
+        hover<br />
+        effect
+      </h1>
+    </div>
+  </body>
+
+  <style type="text/css">
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .box {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      box-sizing: border-box;
+      background-color: yellow;
+    }
+
+    h1 {
+      margin: 0;
+      padding: 0;
+      color: #272727;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      text-align: center;
+      font-size: 24px;
+      text-transform: uppercase;
+    }
+
+    span {
+      color: #58c747;
+      font-size: 30px;
+    }
+
+    .box:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-top: 4px solid #58c747;
+      border-bottom: 4px solid #58c747;
+      box-sizing: border-box;
+      transition: 0.5s;
+      transform: scaleX(0);
+    }
+
+    .box:hover:before {
+      transform: scaleX(1);
+    }
+
+    .box:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-left: 4px solid #58c747;
+      border-right: 4px solid #58c747;
+      box-sizing: border-box;
+      transition: 0.5s;
+      transform: scaleY(0);
+    }
+
+    .box:hover:after {
+      transform: scaleY(1);
+      transition-delay: 0.5s;
+    }
+
+    .rotated {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #58c747;
+      display: block;
+      background-color: yellow;
+      transform: rotate(45deg);
+      box-sizing: border-box;
+    }
+
+    .rotated:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-top: 4px solid #58c747;
+      border-bottom: 4px solid #58c747;
+      box-sizing: border-box;
+      transition: 0.5s;
+      transform: scaleX(0);
+    }
+
+    .box:hover .rotated:before {
+      transform: scaleX(1);
+      transition-delay: 1s;
+    }
+
+    .rotated:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-left: 4px solid #58c747;
+      border-right: 4px solid #58c747;
+      box-sizing: border-box;
+      transition: 0.5s;
+      transform: scaleY(0);
+    }
+
+    .box:hover .rotated:after {
+      transform: scaleY(1);
+      transition-delay: 1.5s;
+    }
+  </style>
+</html>

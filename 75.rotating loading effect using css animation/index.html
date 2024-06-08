@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="loading"></div>
+  </body>
+  <style type="text/css">
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgb(32, 203, 16);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      perspective: 200px;
+    }
+
+    .loading {
+      width: 100px;
+      height: 100px;
+      background: #fff;
+      border-radius: 12px;
+      animation: loading 2s infinite linear;
+    }
+
+    @keyframes loading {
+      0% {
+        transform: rotateX(0deg) rotateY(0deg);
+      }
+      50% {
+        transform: rotateX(0) rotateY(180deg);
+      }
+      100% {
+        transform: rotateX(180deg) rotateY(180deg);
+      }
+    }
+  </style>
+</html>

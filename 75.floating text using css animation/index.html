@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>
+      Coming<br />
+      Soon
+    </h1>
+  </body>
+  <style type="text/css">
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 300vh;
+      background: rgb(22, 220, 18);
+    }
+    h1 {
+      font-family: aril;
+      text-align: center;
+      color: white;
+      line-height: 90px;
+      font-size: 90px;
+      letter-spacing: 15px;
+      text-transform: uppercase;
+      /*  text-shadow: 
+          h-shadow:必需。水平阴影的位置。允许负值。
+          v-shadow:必需。垂直阴影的位置。允许负值。
+          blur: 可选。模糊的距离。
+          color: 可选。阴影的颜色
+        */
+      /* overlap the text shadow many times to make the font bolder and fatter, 
+      actuall you only need the last line to give the text a suitable shadow. */
+      text-shadow: 0 1px 0 #efefef, 0 2px 0 #efefef, 0 3px 0 #efefef,
+        0 4px 0 #efefef, 0 30px 5px rgba(0, 0, 0, 0.1);
+
+      animation: swag 3s linear infinite alternate;
+    }
+
+    @keyframes swag {
+      from {
+        transform: rotate(5deg);
+      }
+      to {
+        transform: rotate(-5deg);
+      }
+    }
+  </style>
+</html>

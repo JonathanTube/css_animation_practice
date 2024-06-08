@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div></div>
+  </body>
+  <style type="text/css">
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    div {
+      width: 150px;
+      height: 150px;
+      background-color: red;
+      border-radius: 20%;
+      animation-name: moving;
+      animation-duration: 4s;
+      animation-iteration-count: 2;
+      /* normal, reverse, alternate, alternate-reverse */
+      animation-direction: alternate;
+    }
+
+    @keyframes moving {
+      0% {
+        transform: translateX(100px);
+        background-color: green;
+      }
+
+      50% {
+        transform: translateX(800px);
+        background: yellow;
+      }
+
+      100% {
+        transform: translate(800px, 500px);
+        background-color: blue;
+      }
+    }
+  </style>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="#">Hover Me</a>
+  </body>
+  <style type="text/css">
+    body {
+      background-color: #000;
+      display: flex;
+      align-items: center;
+      height: 100vh;
+      justify-content: center;
+    }
+
+    a {
+      border: 3px solid #fff;
+      padding: 40px 80px;
+      font-size: 40px;
+      font-family: sans-serif;
+      text-decoration: none;
+      color: #fff;
+      transition: all 0.3s;
+    }
+
+    a:hover {
+      border: 3px solid #f44336;
+      color: #f44336;
+      animation: shaking 0.3s linear;
+    }
+
+    @keyframes shaking {
+      33% {
+        transform: rotate(10deg);
+      }
+      66% {
+        transform: rotate(-10deg);
+      }
+      100% {
+        transform: rotate(10deg);
+      }
+    }
+  </style>
+</html>

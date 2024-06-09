@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="background">
+      <img src="motorbike.svg" alt="motrobike" />
+    </div>
+  </body>
+  <style type="text/css">
+    body {
+      padding: 0;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .background {
+      width: 80vw;
+      height: 80vh;
+      background: url("bg.jpg");
+      background-position: bottom right;
+      animation: bg-moving 15s linear infinite;
+      background-size: auto 100%;
+      position: relative;
+    }
+
+    img {
+      position: absolute;
+      left: 40%;
+      bottom: 100px;
+      width: 240px;
+      height: auto;
+    }
+
+    @keyframes bg-moving {
+      from {
+        background-position: bottom left;
+      }
+      to {
+        background-position: bottom right;
+      }
+    }
+  </style>
+</html>

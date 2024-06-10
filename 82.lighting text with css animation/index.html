@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li>l</li>
+      <li>i</li>
+      <li>g</li>
+      <li>h</li>
+      <li>t</li>
+      <li>i</li>
+      <li>n</li>
+      <li>g</li>
+    </ul>
+  </body>
+  <style type="text/css">
+    body {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Lato", sans-serif;
+      background: #272727;
+    }
+
+    ul {
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 80px;
+      font-weight: bolder;
+      letter-spacing: 30px;
+      display: flex;
+    }
+
+    li {
+      list-style: none;
+      animation: lighting 1.4s linear infinite;
+      color: #fff900;
+    }
+
+    @keyframes lighting {
+      0% {
+        color: #484848;
+        text-shadow: none;
+      }
+      90% {
+        color: #484848;
+        text-shadow: none;
+      }
+      100% {
+        color: #fff900;
+        /* don't forget comma */
+        text-shadow: 0 0 7px #fff900, 0 0 50px #ff6c00;
+      }
+    }
+
+    li:nth-child(1) {
+      animation-delay: 0.1s;
+    }
+    li:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+    li:nth-child(3) {
+      animation-delay: 0.3s;
+    }
+    li:nth-child(4) {
+      animation-delay: 0.4s;
+    }
+    li:nth-child(5) {
+      animation-delay: 0.5s;
+    }
+    li:nth-child(6) {
+      animation-delay: 0.6s;
+    }
+    li:nth-child(7) {
+      animation-delay: 0.7s;
+    }
+    li:nth-child(8) {
+      animation-delay: 0.8s;
+    }
+  </style>
+</html>

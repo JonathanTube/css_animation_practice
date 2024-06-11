@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="heart"></div>
+  </body>
+  <style type="text/css">
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background-color: #262626;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .heart {
+      width: 100px;
+      height: 100px;
+      background-color: #ff3838;
+      position: relative;
+      transform: rotate(45deg);
+      animation: heartBeating 0.5s linear infinite alternate;
+    }
+
+    .heart:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-color: #ff3838;
+      border-radius: 50%;
+      transform: translateY(-50%);
+    }
+
+    .heart:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-color: #ff3838;
+      border-radius: 50%;
+      transform: translateX(-50%);
+    }
+
+    @keyframes heartBeating {
+      0% {
+        transform: rotate(45deg) scale(1);
+      }
+      20% {
+        transform: rotate(45deg) scale(1.4);
+      }
+      40% {
+        transform: rotate(45deg) scale(1.2);
+      }
+      60% {
+        transform: rotate(45deg) scale(1.2);
+      }
+      100% {
+        transform: rotate(45deg) scale(1);
+      }
+    }
+  </style>
+</html>

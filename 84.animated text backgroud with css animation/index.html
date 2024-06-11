@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>css animation</h1>
+  </body>
+  <style type="text/css">
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background-color: #273c75;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    h1 {
+      font-size: 200px;
+      text-align: center;
+      text-transform: uppercase;
+      background: url("bg.jpg");
+      /* border-box：whole space including border */
+      /* border-padding: whole space not including border but including padding */
+      /* border-content: not including border and padding,just content space */
+      /* text: only cover by text space */
+      /* background-clip: text; */
+      /* this place is setted transparent to see the background */
+      color: transparent;
+      animation: moving 20s linear infinite alternate;
+    }
+
+    @keyframes moving {
+      from {
+        background-position: 0 0;
+      }
+      to {
+        background-position: 100% 100%;
+      }
+    }
+  </style>
+</html>

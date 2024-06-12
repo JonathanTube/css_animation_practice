@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/afba94a29e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <ul>
+      <li>l</li>
+      <li>o</li>
+      <li>a</li>
+      <li>d</li>
+      <li>i</li>
+      <li>n</li>
+      <li>g</li>
+    </ul>
+  </body>
+
+  <style type="text/css">
+    body {
+      height: 100vh;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    ul {
+      display: flex;
+      column-gap: 20px;
+    }
+
+    ul li {
+      position: relative;
+      list-style: none;
+      font-size: 80px;
+      letter-spacing: 20px;
+      animation: loading 3s linear infinite alternate;
+      text-transform: uppercase;
+    }
+
+    @keyframes loading {
+      0% {
+        color: red;
+        transform: translateX(-50px);
+        letter-spacing: 20px;
+        opacity: 0;
+      }
+
+      10% {
+        opacity: 1;
+      }
+
+      50% {
+        letter-spacing: -20px;
+        opacity: 1;
+      }
+
+      100% {
+        color: blue;
+        transform: translateX(50px);
+        opacity: 0;
+      }
+    }
+
+    ul li:nth-child(1) {
+      animation-delay: 0s;
+    }
+
+    ul li:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    ul li:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+
+    ul li:nth-child(4) {
+      animation-delay: 0.6s;
+    }
+
+    ul li:nth-child(5) {
+      animation-delay: 0.8s;
+    }
+
+    ul li:nth-child(6) {
+      animation-delay: 1s;
+    }
+
+    ul li:nth-child(7) {
+      animation-delay: 1.2s;
+    }
+  </style>
+</html>

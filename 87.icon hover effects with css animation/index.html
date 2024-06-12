@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/afba94a29e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <i class="fa-brands fa-facebook-f"></i>
+      </li>
+      <li><i class="fa-brands fa-twitter"></i></li>
+      <li><i class="fa-brands fa-google"></i></li>
+      <li><i class="fa-brands fa-youtube"></i></li>
+      <li><i class="fa-brands fa-instagram"></i></li>
+    </ul>
+  </body>
+
+  <style type="text/css">
+    body {
+      height: 100vh;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    ul {
+      display: flex;
+      column-gap: 20px;
+    }
+
+    ul li {
+      position: relative;
+      cursor: pointer;
+      list-style: none;
+      border: 2px solid #0a3d62;
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    ul li:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: #0a3d62;
+      opacity: 0;
+      transition: all 0.5s;
+      z-index: -1;
+    }
+
+    ul li:hover::before {
+      opacity: 1;
+      transform: scale(0.8);
+    }
+
+    ul li:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 2px dashed #0a3d62;
+      border-radius: 50%;
+      box-sizing: border-box;
+      opacity: 0;
+    }
+
+    ul li:hover::after {
+      animation: rotating 10s linear infinite;
+    }
+
+    ul li i {
+      font-size: 40px;
+      transition: all 0.5s;
+    }
+
+    ul li:hover i {
+      color: #fff;
+    }
+
+    @keyframes rotating {
+      from {
+        opacity: 1;
+        transform: rotate(0) scale(0.92);
+      }
+      to {
+        opacity: 1;
+        transform: rotate(360deg) scale(0.92);
+      }
+    }
+  </style>
+</html>

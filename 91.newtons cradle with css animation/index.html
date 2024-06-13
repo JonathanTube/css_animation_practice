@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="cradle">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+  </body>
+  <style type="text/css">
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      width: 100vw;
+      background-color: #272727;
+      perspective: 200px;
+    }
+
+    .cradle {
+      display: flex;
+      border-top: 10px solid yellowgreen;
+    }
+
+    .cradle span {
+      display: block;
+      width: 3px;
+      height: 300px;
+      background-color: #fff;
+      margin: 0 28px;
+      position: relative;
+    }
+
+    .cradle span:before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: #18d2d9;
+      transform: translateX(-50%);
+    }
+
+    .cradle span:first-child {
+      transform-origin: top;
+      animation: span-first-child 2s ease-in infinite;
+      transition-delay: 2s;
+    }
+
+    .cradle span:last-child {
+      transform-origin: top;
+      animation: span-last-child 2s ease-in infinite;
+      /* animation-delay: 1s; */
+    }
+
+    @keyframes span-first-child {
+      0% {
+        transform: rotate(45deg);
+      }
+
+      25% {
+        transform: rotate(0deg);
+      }
+
+      50% {
+        transform: rotate(0deg);
+      }
+
+      75% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(45deg);
+      }
+    }
+
+    @keyframes span-last-child {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      20% {
+        transform: rotate(0deg);
+      }
+
+      50% {
+        transform: rotate(-45deg);
+      }
+
+      75% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+  </style>
+</html>

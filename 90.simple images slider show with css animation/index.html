@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="slide"></div>
+  </body>
+  <style type="text/css">
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      width: 100vw;
+      background-color: #272727;
+      perspective: 200px;
+    }
+
+    .slide {
+      width: 500px;
+      height: 300px;
+      background-size: cover;
+      background-image: url("https://img.freepik.com/premium-photo/medium-shot-woman-living-farmhouse_23-2150621719.jpg?w=826");
+      background-repeat: no-repeat;
+      animation: bg-change 10s linear infinite alternate;
+      border: 12px solid #fff;
+      box-shadow: 0 0 22px 2px #fff;
+    }
+
+    @keyframes bg-change {
+      0% {
+        transform: rotate(0);
+        background-image: url("https://img.freepik.com/premium-photo/medium-shot-woman-living-farmhouse_23-2150621719.jpg?w=826");
+      }
+      50% {
+        background-image: url("https://img.freepik.com/premium-photo/medium-shot-woman-living-farmhouse_23-2150621719.jpg?w=826");
+      }
+      100% {
+        transform: rotate(0);
+        background-image: url("https://img.freepik.com/free-photo/full-shot-family-running-meadow_23-2149049202.jpg?t=st=1718249950~exp=1718253550~hmac=d7367c01e232ec2930ae670a829e9c62f5d0ae0fc9d0f7fdb6da8ddef72e4280&w=826");
+      }
+    }
+  </style>
+</html>

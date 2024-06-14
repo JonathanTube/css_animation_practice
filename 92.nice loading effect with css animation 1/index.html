@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </body>
+  <style type="text/css">
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      width: 100vw;
+      background-color: #001734;
+      perspective: 200px;
+    }
+
+    .container {
+      display: flex;
+      width: 100px;
+      height: 100px;
+      /* background: red; */
+      position: relative;
+      transform: rotate(45deg);
+      animation: scaling 1s linear infinite;
+    }
+
+    span {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background: blue;
+      animation: rotate 1s linear infinite;
+    }
+
+    span:nth-child(1) {
+      top: 0;
+      background-color: lightcyan;
+    }
+
+    span:nth-child(2) {
+      right: 0;
+      background-color: greenyellow;
+    }
+
+    span:nth-child(3) {
+      bottom: 0;
+      background-color: orange;
+    }
+
+    span:nth-child(4) {
+      right: 0;
+      bottom: 0;
+      background-color: lightpink;
+    }
+
+    @keyframes scaling {
+      /* like ease effect */
+      0% {
+        width: 100px;
+        height: 100px;
+      }
+
+      10% {
+        width: 100px;
+        height: 100px;
+      }
+
+      50% {
+        width: 150px;
+        height: 150px;
+      }
+
+      90% {
+        width: 100px;
+        height: 100px;
+      }
+
+      100% {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0);
+      }
+
+      10% {
+        transform: rotate(0);
+      }
+
+      50% {
+        transform: rotate(90deg);
+      }
+
+      90% {
+        transform: rotate(90deg);
+      }
+
+      100% {
+        transform: rotate(90deg);
+      }
+    }
+  </style>
+</html>

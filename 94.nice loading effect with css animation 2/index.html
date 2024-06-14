@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>loading...</h1>
+  </body>
+  <style type="text/css">
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #2c3a47;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    h1 {
+      font-size: 40px;
+      margin: 0;
+      padding: 0;
+      letter-spacing: 10px;
+      text-transform: uppercase;
+      color: #fff;
+      position: relative;
+    }
+
+    h1:before {
+      content: "loading...";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      color: #f6b93b;
+      overflow: hidden;
+      border-right: 4px solid #f6b93b;
+      animation: animate 5s linear infinite;
+    }
+
+    @keyframes animate {
+      0% {
+        width: 0;
+      }
+      50% {
+        width: 100%;
+      }
+      100% {
+        width: 0;
+      }
+    }
+  </style>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="outer">
+      <div class="dot"></div>
+    </div>
+  </body>
+  <style type="text/css">
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #2c3a47;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .outer {
+      width: 300px;
+      height: 300px;
+      border-left: 5px solid lightblue;
+      border-right: 5px solid lightblue;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      border-radius: 50%;
+      position: relative;
+      animation: animate 1s linear infinite;
+    }
+
+    .outer:before {
+      content: "";
+      position: absolute;
+      left: 10%;
+      top: 10%;
+      right: 10%;
+      bottom: 10%;
+      border-radius: 50%;
+      border-left: 5px solid lightgreen;
+      border-right: 5px solid lightgreen;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      animation: animate 0.5s linear infinite reverse;
+    }
+
+    .outer:after {
+      content: "";
+      position: absolute;
+      left: 20%;
+      top: 20%;
+      right: 20%;
+      bottom: 20%;
+      border-radius: 50%;
+      border-left: 5px solid lightcoral;
+      border-right: 5px solid lightcoral;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+    }
+
+    @keyframes animate {
+      0% {
+        transform: rotate(0);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</html>

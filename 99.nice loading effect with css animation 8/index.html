@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </body>
+  <style type="text/css">
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #2c3a47;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    div {
+      display: flex;
+    }
+
+    span {
+      display: block;
+      width: 10px;
+      height: 60px;
+      background: greenyellow;
+      position: relative;
+      margin: 0 2px;
+      border-radius: 5px;
+      transform: scaleY(0.1);
+      transform-origin: middle center;
+      animation: animate 1s ease-in-out infinite;
+    }
+
+    span:nth-child(1) {
+      animation-delay: 0.1s;
+    }
+    span:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+    span:nth-child(3) {
+      animation-delay: 0.3s;
+    }
+    span:nth-child(4) {
+      animation-delay: 0.4s;
+    }
+    span:nth-child(5) {
+      animation-delay: 0.5s;
+    }
+    span:nth-child(6) {
+      animation-delay: 0.6s;
+    }
+    span:nth-child(7) {
+      animation-delay: 0.7s;
+    }
+    span:nth-child(8) {
+      animation-delay: 0.8s;
+    }
+    span:nth-child(9) {
+      animation-delay: 0.9s;
+    }
+
+    @keyframes animate {
+      0% {
+        transform: scaleY(0.1);
+      }
+
+      35% {
+        transform: scaleY(1);
+      }
+
+      60%,
+      100% {
+        transform: scaleY(0.1);
+      }
+    }
+  </style>
+</html>

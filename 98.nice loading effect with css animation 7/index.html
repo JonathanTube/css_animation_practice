@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </body>
+  <style type="text/css">
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #2c3a47;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    div {
+      width: 90px;
+      height: 90px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+
+    span {
+      display: block;
+      width: 30px;
+      height: 30px;
+      /* background: red; */
+      position: relative;
+    }
+
+    span:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      background-color: #fff;
+      animation: animate 1s linear infinite;
+    }
+
+    span:nth-child(4):before,
+    span:nth-child(5):before,
+    span:nth-child(6):before {
+      animation-delay: 0.1s;
+    }
+
+    span:nth-child(7):before,
+    span:nth-child(8):before,
+    span:nth-child(9):before {
+      animation-delay: 0.2s;
+    }
+
+    @keyframes animate {
+      0% {
+        width: 30px;
+        height: 30px;
+      }
+
+      100% {
+        width: 0;
+        height: 0;
+      }
+    }
+  </style>
+</html>

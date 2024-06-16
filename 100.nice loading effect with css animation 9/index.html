@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="text">background animation</div>
+    </div>
+  </body>
+  <style type="text/css">
+    body {
+      background: #333;
+      margin: 0;
+      height: 100vh;
+    }
+
+    .container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 45px;
+      font-weight: bold;
+      border-top: 5px solid #fff;
+      border-bottom: 5px solid #fff;
+      white-space: nowrap;
+    }
+
+    .square {
+      position: absolute;
+      bottom: -100px;
+      background-color: #f2f2f2;
+      animation: boxes 5s linear infinite;
+    }
+
+    .square:nth-child(1) {
+      width: 70px;
+      height: 70px;
+      left: 30%;
+      animation-delay: 1s;
+    }
+
+    .square:nth-child(2) {
+      width: 40px;
+      height: 40px;
+      left: 20%;
+      animation-delay: 1.9s;
+    }
+
+    .square:nth-child(3) {
+      width: 90px;
+      height: 90px;
+      left: 40%;
+      animation-delay: 3s;
+    }
+
+    .square:nth-child(4) {
+      width: 40px;
+      height: 40px;
+      left: 50%;
+      animation-delay: 1.2s;
+    }
+
+    .square:nth-child(5) {
+      width: 40px;
+      height: 40px;
+      left: 60%;
+      animation-delay: 3s;
+    }
+
+    .square:nth-child(6) {
+      width: 40px;
+      height: 40px;
+      left: 10%;
+      animation-delay: 4.2s;
+    }
+
+    .square:nth-child(7) {
+      width: 40px;
+      height: 40px;
+      left: 80%;
+      animation-delay: 2s;
+    }
+
+    .square:nth-child(8) {
+      width: 40px;
+      height: 40px;
+      left: 90%;
+      animation-delay: 3.8s;
+    }
+
+    .square:nth-child(9) {
+      width: 40px;
+      height: 40px;
+      left: 5%;
+      animation-delay: 0.2s;
+    }
+
+    .square:nth-child(10) {
+      width: 40px;
+      height: 40px;
+      left: 10%;
+      animation-delay: 7.2s;
+    }
+
+    @keyframes boxes {
+      0% {
+        bottom: -100px;
+      }
+
+      100% {
+        bottom: 100%;
+        transform: rotate(180deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</html>
